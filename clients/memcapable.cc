@@ -43,7 +43,7 @@
 
 #include <vector>
 
-#ifndef __INTEL_COMPILER
+#if !defined(__INTEL_COMPILER) && !defined(__clang__)
 #pragma GCC diagnostic ignored "-Wformat-overflow"
 #endif
 
@@ -2086,8 +2086,11 @@ struct testcase testcases[]= {
   { NULL, NULL}
 };
 
+#if 0
+// Unused vars
 const int ascii_tests = 1;
 const int binary_tests = 2;
+#endif
 
 struct test_type_st
 {

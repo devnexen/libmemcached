@@ -49,7 +49,7 @@ using namespace libtest;
 
 #include "tests/hash_results.h"
 
-#ifndef __INTEL_COMPILER
+#if !defined(__INTEL_COMPILER) && !defined(__clang__)
 #pragma GCC diagnostic ignored "-Wint-in-bool-context"
 #endif
 

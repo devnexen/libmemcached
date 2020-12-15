@@ -41,7 +41,7 @@
 #include <cstdlib>
 #include <unistd.h>
 
-#ifndef __INTEL_COMPILER
+#if !defined(__INTEL_COMPILER) && !defined(__clang__)
 #pragma GCC diagnostic ignored "-Wstringop-truncation"
 #endif
 

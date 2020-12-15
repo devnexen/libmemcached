@@ -49,6 +49,11 @@
 # ifdef __MINGW32__
 #  define __WORDSIZE 32
 # endif
+# if defined(__LP64__)
+#  define __WORDSIZE 64
+# else
+#  define __WORDSIZE 32
+# endif
 #endif
 
 #include <libhashkit-1.0/hashkit.h>

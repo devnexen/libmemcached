@@ -94,7 +94,7 @@ using namespace libtest;
 
 #include "libmemcached/instance.hpp"
 
-#ifndef __INTEL_COMPILER
+#if !defined(__INTEL_COMPILER) && !defined(__clang__)
 #pragma GCC diagnostic ignored "-Wformat-truncation"
 #endif
 

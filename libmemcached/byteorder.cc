@@ -44,7 +44,14 @@
 # include <libkern/OSByteOrder.h>
 #endif
 
+#if defined(__sun)
+# include <sys/types.h>
+# include <netinet/in.h>
+# include <inttypes.h>
+#endif
+
 /* Byte swap a 64-bit number. */
+#ifndef HAVE_HTONLL
 #ifndef swap64
 static inline uint64_t swap64(uint64_t in)
 {
@@ -63,6 +70,7 @@ static inline uint64_t swap64(uint64_t in)
   return in;
 #endif // WORDS_BIGENDIAN
 }
+#endif
 #endif
 
 

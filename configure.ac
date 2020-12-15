@@ -141,6 +141,7 @@ AC_DEFINE([HAVE_MEMCACHED_SASL_BINARY],[0],[If Memcached binary with sasl suppor
 # Checks for libraries.
 AC_SEARCH_LIBS([getopt_long],[gnugetopt])
 AC_SEARCH_LIBS([gethostbyname],[nsl])
+AC_SEARCH_LIBS([recv],[socket])
 
 # Checks for header files.
 AC_CHECK_HEADERS_ONCE([arpa/inet.h])

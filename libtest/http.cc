@@ -44,7 +44,7 @@
 class CURL;
 #endif
 
-#ifndef __INTEL_COMPILER
+#if !defined(__INTEL_COMPILER) && !defined(__clang__)
 #pragma GCC diagnostic ignored "-Wclass-memaccess"
 #endif
 

@@ -37,7 +37,7 @@
 #include "libtest/yatlcon.h"
 #include <libtest/common.h>
 
-#ifndef __INTEL_COMPILER
+#if !defined(__INTEL_COMPILER) && !defined(__clang__)
 #pragma GCC diagnostic ignored "-Wstringop-truncation"
 #pragma GCC diagnostic ignored "-Wstringop-overflow"
 #endif

@@ -48,7 +48,7 @@
 #include <libgearman-1.0/ostream.hpp>
 #endif
 
-#ifndef __INTEL_COMPILER
+#if !defined(__INTEL_COMPILER) && !defined(__clang__)
 #pragma GCC diagnostic ignored "-Wnonnull-compare"
 #pragma GCC diagnostic ignored "-Waddress"
 #endif

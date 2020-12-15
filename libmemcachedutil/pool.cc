@@ -41,6 +41,7 @@
 #include <cassert>
 #include <cerrno>
 #include <pthread.h>
+#include <string.h>
 #include <memory>
 
 struct memcached_pool_st
